@@ -33,7 +33,9 @@ Good luck!
 
 ```bash
 git clone https://github.com/your-username/wall-room-annotation-api.git
+
 cd wall-room-annotation-api
+```
 
 ## Usage
 Start the Flask server:
