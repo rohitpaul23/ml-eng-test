@@ -13,16 +13,44 @@ Good luck!
 ## Full test description
 [Senior Machine Learning Engineer.pdf](https://github.com/user-attachments/files/16702909/Senior.Machine.Learning.Engineer.pdf)
 
+## Features
 
-## PS
-Share your project with the following GitHub users:
-- vhaine-tb
-- gabrielreis-tb
+- Upload PDF files containing floor plans or Image.
+- Annotate walls or rooms based on user selection.
+- Returns annotated images in PNG format.
 
+## Installation
+
+### Prerequisites
+
+- Python 3.6 or higher
+- Flask
+- OpenCV
+- pytesseract
+- Other required libraries specified in `requirements.txt`
+
+### Clone the Repository
+
+```bash
+git clone https://github.com/your-username/wall-room-annotation-api.git
+cd wall-room-annotation-api
+
+## Usage
+Start the Flask server:
+
+```bash
+python app.py
+```
+
+The API will be running at http://localhost:5000.
+
+Use curl or any API client (like Postman) to interact with the API.
 ## Example cURL
 ```
-curl -X POST -F "image=@extracted_page_xyz.png" "http://localhost:3000/run-inference?type=wall"
-curl -X POST -F "image=@extracted_page_xyz.png" "http://localhost:3000/run-inference?type=room"
-curl -X POST -F "image=@extracted_page_xyz.png" "http://localhost:3000/run-inference?type=page_info"
-curl -X POST -F "image=@extracted_page_xyz.png" "http://localhost:3000/run-inference?type=tables"
+curl.exe -X POST -F "file=@test.pdf" "http://localhost:5000/run-inference?type=room" --output annotated_room_image.png
+curl.exe -X POST -F "file=@test.pdf" "http://localhost:5000/run-inference?type=wall" --output annotated_room_image.png
+curl.exe -X POST -F "file=@test.png" "http://localhost:5000/run-inference?type=room" --output annotated_room_image.png
 ```
+
+
+
